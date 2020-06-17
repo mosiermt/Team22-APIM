@@ -56,3 +56,13 @@ def EoB(patient):
         if patient in entry["patient"]["reference"]:
             returnBundle["entry"].append(entry)
     return returnBundle
+
+    @app.route('api/TrendAnalysis')
+def ObsBundle(patient):
+    r = requests.get(BASE_URL+"Observation", headers = getAuth())
+    result = r.json
+    returnBundle = {"entry": []}
+    for entry in result["entry"]:
+        if patient in entry["patient"]["reference"]:
+            returnBundle["entry"].append(entry)
+    return returnBundle
