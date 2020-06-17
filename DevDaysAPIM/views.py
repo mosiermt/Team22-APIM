@@ -62,27 +62,20 @@ def home():
         year=datetime.now().year,
     )
 
+@app.route('/monitor/<patient>')
+def monitor(patient):
+    r = requests.request(request.method, f'{BASE_URL}Observation', headers=getAuth())
+    result = r.json()
+    filtered = []
 
-@app.route('/contact')
-def contact():
-    """Renders the contact page."""
-    return render_template(
-        'contact.html',
-        title='Contact',
-        year=datetime.now().year,
-        message='Your contact page.'
-    )
+    for entry in result["entry"]:
+        if patient in entry["subject"]["reference"]:
+            filtered.append(entry)
 
+    #average
+    #gather all datapoints into a list of tuples
 
-@app.route('/about')
-def about():
-    """Renders the about page."""
-    return render_template(
-        'about.html',
-        title='About',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
+    return jsonify({"status": r.status_code, "message": filtered})
 
 
 @app.route('/api/Observation')
