@@ -59,17 +59,7 @@ def PassThrough(resource, id=""):
     print(result)
     return jsonify({"status": r.status_code, "message": result})
 
-@app.route('api/ExplanationOfBenefit')
-def EoB(patient):
-    r = requests.get(BASE_URL+"ExplanationOfBenefit", headers = getAuth())
-    result = r.json
-    returnBundle = {"entry": []}
-    for entry in result["entry"]:
-        if patient in entry["patient"]["reference"]:
-            returnBundle["entry"].append(entry)
-    return returnBundle
-
-@app.route('api/TrendAnalysis')
+@app.route('api/TrendAnalysis/<patient>')
 def ObsBundle(patient):
     r = requests.get(BASE_URL+"Observation", headers = getAuth())
     result = r.json
@@ -77,4 +67,5 @@ def ObsBundle(patient):
     for entry in result["entry"]:
         if patient in entry["patient"]["reference"]:
             returnBundle["entry"].append(entry)
-    return returnBundle
+    #return returnBundle
+    return jsonify({"status": r.status_code, "message": returnBundle})
