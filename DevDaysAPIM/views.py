@@ -47,7 +47,7 @@ def about():
     )
 
 
-@app.route('api/<resource>/<patient>')
+@app.route('/api/<resource>/<patient>')
 def EoB(resource="", patient=""):
     r = requests.get(BASE_URL+resource, headers = getAuth())
     result = r.json()
