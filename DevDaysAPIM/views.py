@@ -51,6 +51,15 @@ def about():
         message='Your application description page.'
     )
 
+
+@app.route('/api/Observation')
+@app.route('/api/Observation/<id>')
+def Observation(id=""):
+    if request.method == "POST" or request.method == "PUT":
+        body = request.json
+
+
+
 @app.route('/api/<resource>')
 @app.route('/api/<resource>/<id>')
 def PassThrough(resource, id=""):
@@ -58,6 +67,3 @@ def PassThrough(resource, id=""):
     result = r.json()
     print(result)
     return jsonify({"status": r.status_code, "message": result})
-
-
-
