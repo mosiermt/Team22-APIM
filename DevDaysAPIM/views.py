@@ -3,7 +3,7 @@ Routes and views for the flask application.
 """
 
 from datetime import datetime
-from flask import render_template
+from flask import render_template, request, jsonify
 from DevDaysAPIM import app
 import requests
 
@@ -51,17 +51,13 @@ def about():
         message='Your application description page.'
     )
 
-
-@app.route('/api/<resource>/<patient>')
-def EoB(resource="", patient=""):
-    r = requests.get(BASE_URL+resource, headers = getAuth())
+@app.route('/api/<resource>')
+@app.route('/api/<resource>/<id>')
+def PassThrough(resource, id=""):
+    r = requests.request(request.method, f'{BASE_URL}{resource}/{id}', headers=getAuth())
     result = r.json()
-    returnBundle = {"entry": []}
+    print(result)
+    return jsonify({"status": r.status_code, "message": result})
 
-    if "entry" in result.keys():
-        for entry in result["entry"]:
-            if patient in entry["patient"]["reference"]:
-                returnBundle["entry"].append(entry)
-        return returnBundle
-    else:
-        return {"status": 404, "error_message": "resource not found"}
+
+
