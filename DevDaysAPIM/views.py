@@ -47,12 +47,16 @@ def about():
     )
 
 
-@app.route('api/ExplanationOfBenefit')
-def EoB(patient):
-    r = requests.get(BASE_URL+"ExplanationOfBenefit", headers = getAuth())
-    result = r.json
+@app.route('api/<resource>/<patient>')
+def EoB(resource="", patient=""):
+    r = requests.get(BASE_URL+resource, headers = getAuth())
+    result = r.json()
     returnBundle = {"entry": []}
-    for entry in result["entry"]:
-        if patient in entry["patient"]["reference"]:
-            returnBundle["entry"].append(entry)
-    return returnBundle
+
+    if "entry" in result.keys():
+        for entry in result["entry"]:
+            if patient in entry["patient"]["reference"]:
+                returnBundle["entry"].append(entry)
+        return returnBundle
+    else:
+        return {"status": 404, "error_message": "resource not found"}
