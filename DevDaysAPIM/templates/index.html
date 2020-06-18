@@ -3,11 +3,14 @@
 {% block content %}
 
 <div class="jumbotron">
-    <h1>Flask</h1>
-    <p class="lead">Flask is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <h1>Team 22 Hack</h1>
+    <p class="lead">Team 22's hack is a real time notification system, built to notify doctors of patients' health trends. Thanks to the popularity of wearables and smart devices, we are able to use a basic model to analyze trends of vital signs recorded through FHIR observations.</p>
+    <br>Enter Patient ID to see vitals:<br><input type="text" id='mainIn' style="max-width:1000px;width:100%">
+  
+    
+    <p><a class="btn btn-primary btn-large" onclick="window.location.href= '/monitor/'+document.getElementById('mainIn').value " >See Vitals &raquo;</a></p>
 </div>
-
+<!--
 <div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
@@ -29,5 +32,5 @@
         <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
     </div>
 </div>
-
+-->
 {% endblock %}
