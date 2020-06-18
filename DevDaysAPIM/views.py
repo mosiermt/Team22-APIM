@@ -76,7 +76,13 @@ def monitor(patient):
     #gather all datapoints into a list of tuples
 
     return jsonify({"status": r.status_code, "message": filtered})
+@app.route('/about')
+def about():
+    return "See index"
 
+@app.route('/contact')
+def contact():
+    return "Contact Matt, he knows whats good"
 
 @app.route('/api/Observation')
 @app.route('/api/Observation/<id>')
@@ -101,7 +107,7 @@ def PassThrough(resource, id=""):
     print(result)
     return jsonify({"status": r.status_code, "message": result})
 
-@app.route('api/TrendAnalysis/<patient>')
+@app.route('/api/TrendAnalysis/<patient>')
 def ObsBundle(patient):
     r = requests.get(BASE_URL+"Observation", headers = getAuth())
     result = r.json
