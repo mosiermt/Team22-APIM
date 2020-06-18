@@ -18,7 +18,7 @@ def getAuth():
     token = "https://login.microsoftonline.com/b3d5c713-586f-449f-a7de-45c3283de364/oauth2/v2.0/token"
     scope = "https://team22fhirserver.azurehealthcareapis.com/daemon"
 
-    token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IlNzWnNCTmhaY0YzUTlTNHRycFFCVEJ5TlJSSSIsImtpZCI6IlNzWnNCTmhaY0YzUTlTNHRycFFCVEJ5TlJSSSJ9.eyJhdWQiOiJodHRwczovL3RlYW0yMmZoaXJzZXJ2ZXIuYXp1cmVoZWFsdGhjYXJlYXBpcy5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iM2Q1YzcxMy01ODZmLTQ0OWYtYTdkZS00NWMzMjgzZGUzNjQvIiwiaWF0IjoxNTkyNDE1MzM4LCJuYmYiOjE1OTI0MTUzMzgsImV4cCI6MTU5MjQxOTIzOCwiYWNyIjoiMSIsImFpbyI6IkFWUUFxLzhQQUFBQU5aNVBtT3lPMTBWM3ZxRVMrazhNOXdaMnB2US9ITTVsdU5FdFJyRC95TE4rOWpROFdaVjhKQ2I0QmpVemxmT0YrUGovc2dJeDEwTXU3bVV1WGUzcGN6ZTFHTVlVQkdCdUxnYVZUV1lIcFowPSIsImFtciI6WyJwd2QiXSwiYXBwaWQiOiJlMDc5NDU5NS1iYTRjLTQ2MDYtOTcwYi1mNjgzYTQ1YzBkZjYiLCJhcHBpZGFjciI6IjEiLCJlbWFpbCI6IkRldmRheXN0ZWFtMjJAb3V0bG9vay5jb20iLCJmYW1pbHlfbmFtZSI6InRlYW0gMjIiLCJnaXZlbl9uYW1lIjoiRmhpciBkZXYgZGF5cyIsImlkcCI6ImxpdmUuY29tIiwiaXBhZGRyIjoiNjguMTM0LjE3Mi45NyIsIm5hbWUiOiJGaGlyIGRldiBkYXlzIHRlYW0gMjIiLCJvaWQiOiIyNWE3ZWJiMi00NTA2LTRiZjMtODNhZS1mY2RiMGU2YjAwYzEiLCJzY3AiOiJkYWVtb24iLCJzdWIiOiJPdm9fSUpnbHV5MWV4OUFfRUZFSjMwY3RNMkM5RjBYWjRfaTVBSGoxNUNRIiwidGlkIjoiYjNkNWM3MTMtNTg2Zi00NDlmLWE3ZGUtNDVjMzI4M2RlMzY0IiwidW5pcXVlX25hbWUiOiJsaXZlLmNvbSNEZXZkYXlzdGVhbTIyQG91dGxvb2suY29tIiwidXRpIjoidElybm4tM20yRXUzYzM1ZV9RYmtBQSIsInZlciI6IjEuMCJ9.ZIV7H_PdwNapVTWJ5xnpeFriG9YPEydsJhptoCsk4AG_kl73j7M-7Mbvd0qLFhx3ZTtKcGy7me0w68IkBaKMLKPfMyYh9Ui0gJPfx9Z8Qxbo6mbPoDveipvshV985aS8R2i8cEXouEmMAL76k8hwIbt3ljdIxZ9vVUwh80-jDGDteBgOrS7g4DGvrts7fXx9wCnktt6liHLAga0lTLwG8Hk_WR26JlVgWV9rlCDjBhLuet8W7spb5d_QxGcLukjUrrTN451pHWloc7JNVDhmM1WU4N-buE_BanXi-0FpUeUUS2FkJdQBVucFlPEFGaZ7mgF5Ur-eSZSFbztqFXHQrA"
+    token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IlNzWnNCTmhaY0YzUTlTNHRycFFCVEJ5TlJSSSIsImtpZCI6IlNzWnNCTmhaY0YzUTlTNHRycFFCVEJ5TlJSSSJ9.eyJhdWQiOiJodHRwczovL3RlYW0yMmZoaXJzZXJ2ZXIuYXp1cmVoZWFsdGhjYXJlYXBpcy5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iM2Q1YzcxMy01ODZmLTQ0OWYtYTdkZS00NWMzMjgzZGUzNjQvIiwiaWF0IjoxNTkyNDg1NTA4LCJuYmYiOjE1OTI0ODU1MDgsImV4cCI6MTU5MjQ4OTQwOCwiYWNyIjoiMSIsImFpbyI6IkFWUUFxLzhQQUFBQVozaXFWdHhsR0RJNHpJOUpxc0VZM1FUMmlEcjBIanlNN1Z5eUcwMnRITDRjVVJxR2FwcFhRVldRMUVmSmhESWN2VUtIU3k4WGtTaXdXc293bElnaHZZYWM1TlhSa0hnRDZ3MGVlejh1VFFBPSIsImFtciI6WyJwd2QiXSwiYXBwaWQiOiJlMDc5NDU5NS1iYTRjLTQ2MDYtOTcwYi1mNjgzYTQ1YzBkZjYiLCJhcHBpZGFjciI6IjEiLCJlbWFpbCI6IkRldmRheXN0ZWFtMjJAb3V0bG9vay5jb20iLCJmYW1pbHlfbmFtZSI6InRlYW0gMjIiLCJnaXZlbl9uYW1lIjoiRmhpciBkZXYgZGF5cyIsImlkcCI6ImxpdmUuY29tIiwiaXBhZGRyIjoiNjguMTM0LjE3Mi45NyIsIm5hbWUiOiJGaGlyIGRldiBkYXlzIHRlYW0gMjIiLCJvaWQiOiIyNWE3ZWJiMi00NTA2LTRiZjMtODNhZS1mY2RiMGU2YjAwYzEiLCJzY3AiOiJkYWVtb24iLCJzdWIiOiJPdm9fSUpnbHV5MWV4OUFfRUZFSjMwY3RNMkM5RjBYWjRfaTVBSGoxNUNRIiwidGlkIjoiYjNkNWM3MTMtNTg2Zi00NDlmLWE3ZGUtNDVjMzI4M2RlMzY0IiwidW5pcXVlX25hbWUiOiJsaXZlLmNvbSNEZXZkYXlzdGVhbTIyQG91dGxvb2suY29tIiwidXRpIjoidDlQRUxWczVmVVNZMjNQRVdBZ01BUSIsInZlciI6IjEuMCJ9.GRKDGK7JrT3tcRo0d67H79hPiqfDEZdT2uYFZEs8sCRyLf1WaEGrT55Kt6JPZ4Zmcns1CX-dXNyfU8O8ISVqePuPyJTJB6vgFm6mFkCiba-U5MmeaR9p1Aqzt9q6XsQFUkGnTzIZG5NF6903YwUrGmgGbsjeYmLufDLMWTFm8IinUwsQgIuiPFjyJ9DoQREpW9pcMTVYpk8Y-hEW-OF3caT2fecRYKj_5lTG4dJ4mj6EC99VJ0Glix9C_TP7pf1W0MyxHW8vkHlakHittcKxb5TmucoKjjeqTAm036ejlSAyz4bdFJVTVJZ_VXIquSH541lwqSMBCykXHYXQTVTA1Q"
     return {"Authorization": f"Bearer {token}"}
 
 
@@ -69,11 +69,14 @@ def monitor(patient):
     filtered = []
 
     for entry in result["entry"]:
-        if patient in entry["subject"]["reference"]:
+        print(entry)
+        if patient in entry["resource"]["subject"]["reference"]:
             filtered.append(entry)
 
     #average
     #gather all datapoints into a list of tuples
+    if filtered == []:
+        filtered = "No observations found"
 
     return jsonify({"status": r.status_code, "message": filtered})
 @app.route('/about')
@@ -89,6 +92,7 @@ def contact():
 def Observation(id=""):
     if request.method == "POST" or request.method == "PUT":
         body = request.json
+        print(body)
         if body["resourceType"] == "Observation" and body["category"]["coding"][0]["code"] == "vital-signs":
             if body["code"]["coding"][0]["code"] == "8867-4":
                 #heart rate limits
@@ -104,7 +108,6 @@ def Observation(id=""):
 def PassThrough(resource, id=""):
     r = requests.request(request.method, f'{BASE_URL}{resource}/{id}', headers=getAuth())
     result = r.json()
-    print(result)
     return jsonify({"status": r.status_code, "message": result})
 
 @app.route('/api/TrendAnalysis/<patient>')

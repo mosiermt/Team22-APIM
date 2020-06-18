@@ -42,6 +42,9 @@
     <Folder Include="DevDaysAPIM\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="requirements.txt" />
     <Content Include="DevDaysAPIM\static\content\bootstrap.css" />
     <Content Include="DevDaysAPIM\static\content\bootstrap.min.css" />
